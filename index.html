@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    html, body {
+        padding: 24px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="text"], input[type="button"], select, button {
+        border: 1px solid black;
+        padding: 0.5em 1em;
+        background-color: white;
+    }
+
+    input[type="button"]:hover, button:hover {
+        background-color: lightgray;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .container > * {
+        margin: auto 6px;
+    }
+    </style>
     <script>
         function f() {
             const e1 = document.getElementById('first').value;
@@ -61,6 +88,7 @@
     </script>
 </head>
 <body>
+<div class="container">
 <label for="first"></label><input type="text" id="first">
 <label for="operator"></label><select id="operator" onchange="disableSecond()">
     <option id="plus" value="plus">+</option>
@@ -79,5 +107,6 @@
     <option id="ceil" value="ceil">小数点以下切り上げ</option>
     <option id="rout" value="round">小数点以下四捨五入</option>
 </select>
+</div>
 </body>
 </html>
