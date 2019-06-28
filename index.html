@@ -19,7 +19,6 @@
                 return 'UnSupport'
             }
             var f1 = parseFloat(e1)
-            // const f1 = Math.abs(parseFloat(e1));
             const f2 = parseFloat(e2);
             switch (op) {
                 case 'plus':
@@ -30,7 +29,6 @@
                     return decimalPointCalculate(f1 * f2, decimalPoint)
                 case 'mod':
                     return decimalPointCalculate(f1 / f2, decimalPoint)
-                    // return decimalPointCalculate(f1 * f2, decimalPoint)
                 case 'sqrt':
                     return decimalPointCalculate(Math.sqrt(f1), decimalPoint)
                 case 'square':
